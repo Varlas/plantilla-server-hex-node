@@ -1,47 +1,51 @@
 {
-  "name": "hexagonal-server-template",
-  "version": "1.0.0",
-  "description": "Plantilla de servidor Node.js con arquitectura hexagonal",
-  "main": "dist/main.js",
-  "scripts": {
-    "dev": "tsx watch src/main.ts",
-    "build": "tsc",
-    "start": "node dist/main.js",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\"",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio",
-    "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down"
-  },
-  "keywords": [
-    "nodejs",
-    "typescript",
-    "express",
-    "hexagonal",
-    "prisma"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@prisma/client": "^5.22.0",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "^8.55.0",
-    "@typescript-eslint/parser": "^8.55.0",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.1",
-    "prisma": "^5.22.0",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
-  }
+	"name": "hexagonal-server-template",
+	"version": "1.0.0",
+	"description": "Plantilla de servidor Node.js con arquitectura hexagonal",
+	"main": "dist/main.js",
+	"scripts": {
+		"dev": "tsx watch src/main.ts",
+		"build": "tsc",
+		"start": "node dist/main.js",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"test:run": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"lint": "eslint . --ext .ts",
+		"lint:fix": "eslint . --ext .ts --fix",
+		"format": "prettier --write \"src/**/*.ts\"",
+		"format:check": "prettier --check \"src/**/*.ts\"",
+		"prisma:generate": "prisma generate",
+		"prisma:migrate": "prisma migrate dev",
+		"prisma:studio": "prisma studio"
+	},
+	"keywords": [
+		"nodejs",
+		"typescript",
+		"express",
+		"hexagonal",
+		"prisma"
+	],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"@prisma/client": "^5.22.0",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"@types/node": "^20.10.5",
+		"@typescript-eslint/eslint-plugin": "^8.55.0",
+		"@typescript-eslint/parser": "^8.55.0",
+		"@vitest/ui": "^4.0.18",
+		"eslint": "^9.39.2",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-prettier": "^5.5.5",
+		"prettier": "^3.8.1",
+		"prisma": "^5.22.0",
+		"tsx": "^4.7.0",
+		"typescript": "^5.3.3",
+		"vitest": "^4.0.18"
+	}
 }
