@@ -1,0 +1,22 @@
+// Configuración del generador (crea el cliente de Prisma)
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Configuración de la base de datos
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelo User (tabla en la base de datos)
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String
+  age       Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users") // Nombre de la tabla en la BD
+}
